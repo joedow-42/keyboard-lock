@@ -15,8 +15,7 @@ Without access to these keys, it can be challending for developers to embrace th
 
 ## Problem description (addendum)
 
-The current Lock API allows developers to specify a set of keys, but if no keys are specified it will by default
-capture all keys.
+The current Lock API allows developers to specify a set of keys which are captured at both the Browser and System level.
 Feedback from developers indicates that they would prefer the default to capture only the Browser Keys.
 This document describes our proposal for updating the Lock API.
 
@@ -58,7 +57,7 @@ to just capture Browser Keys.
 ## How the API currently works
 
 The `lock()` method accepts an array of DomKeys to lock/capture. These keys can be a mix of Browser and
-System level keys. If an array is not speficied, then all keys (Browser and System) are captured
+System level keys. If an array is not specified, then all keys (Browser and System) are captured
 
 `lock()` returns a promise which either resolves w/o a return value or rejects with an error.
 
